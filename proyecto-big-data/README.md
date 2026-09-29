@@ -1,8 +1,7 @@
 # Proyecto Big Data — Fuentes de Datos y Selección de Sede
 
 **Unidad 3 — Fuentes de datos en Big Data**
-**Problemática (Opción 2):** Organización de una Convención Internacional de
-Entretenimiento (Comic-Con / Expo Pop).
+**Problemática
 
 ## Contexto
 
@@ -78,6 +77,6 @@ proyecto-big-data/
 
 ## Equipo
 
-- Nombre del integrante 1
-- Nombre del integrante 2
-- Nombre del integrante 3
+- Valentin Almaraz Martinez
+- Alberto Saul Lopez Crespo
+- Gustavo Adalid Catalan Carmen
