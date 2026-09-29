@@ -1,0 +1,115 @@
+{
+  "sede_ganadora": {
+    "ciudad": "London",
+    "restaurantes": 20,
+    "rating_gastronomico": 4.53,
+    "votos": 8724,
+    "pct_delivery": 0.0,
+    "lat": 51.512015611,
+    "lon": -0.13108822225,
+    "iata": "LHR",
+    "aeropuerto": "London Heathrow",
+    "km_al_aeropuerto": 22.9
+  },
+  "ciudades_candidatas": [
+    {
+      "ciudad": "London",
+      "restaurantes": 20,
+      "rating_gastronomico": 4.53,
+      "votos": 8724,
+      "pct_delivery": 0.0,
+      "lat": 51.512015611,
+      "lon": -0.13108822225,
+      "iata": "LHR",
+      "aeropuerto": "London Heathrow",
+      "km_al_aeropuerto": 22.9
+    },
+    {
+      "ciudad": "Dubai",
+      "restaurantes": 20,
+      "rating_gastronomico": 4.37,
+      "votos": 18693,
+      "pct_delivery": 30.0,
+      "lat": 25.1980205835,
+      "lon": 55.274324102,
+      "iata": "DXB",
+      "aeropuerto": "Dubai International",
+      "km_al_aeropuerto": 10.9
+    },
+    {
+      "ciudad": "Vineland Station",
+      "restaurantes": 1,
+      "rating_gastronomico": 4.3,
+      "votos": 204,
+      "pct_delivery": 0.0,
+      "lat": 43.1868697,
+      "lon": -79.3791465,
+      "iata": "YYZ",
+      "aeropuerto": "Toronto Pearson International",
+      "km_al_aeropuerto": 58.1
+    },
+    {
+      "ciudad": "Istanbul",
+      "restaurantes": 14,
+      "rating_gastronomico": 4.29,
+      "votos": 12043,
+      "pct_delivery": 0.0,
+      "lat": 41.029903835000006,
+      "lon": 29.016331271428573,
+      "iata": "IST",
+      "aeropuerto": "Istanbul Airport",
+      "km_al_aeropuerto": 35.1
+    },
+    {
+      "ciudad": "Sharjah",
+      "restaurantes": 20,
+      "rating_gastronomico": 4.03,
+      "votos": 4873,
+      "pct_delivery": 55.0,
+      "lat": 25.3248995955,
+      "lon": 55.397934809000006,
+      "iata": "DXB",
+      "aeropuerto": "Dubai International",
+      "km_al_aeropuerto": 8.7
+    },
+    {
+      "ciudad": "Princeton",
+      "restaurantes": 1,
+      "rating_gastronomico": 4.0,
+      "votos": 542,
+      "pct_delivery": 0.0,
+      "lat": 40.352385,
+      "lon": -74.651139,
+      "iata": "JFK",
+      "aeropuerto": "John F. Kennedy International",
+      "km_al_aeropuerto": 80.5
+    },
+    {
+      "ciudad": "Singapore",
+      "restaurantes": 20,
+      "rating_gastronomico": 3.58,
+      "votos": 638,
+      "pct_delivery": 0.0,
+      "lat": 1.2939161034,
+      "lon": 103.84873413999999,
+      "iata": "SIN",
+      "aeropuerto": "Singapore Changi",
+      "km_al_aeropuerto": 17.7
+    }
+  ],
+  "personaje_mascota": {
+    "id": 132,
+    "nombre": "Ditto",
+    "altura_dm": 3,
+    "peso_hg": 40,
+    "exp_base": 101,
+    "tipos": "normal",
+    "habilidades": "limber, imposter (oculta)",
+    "stat_hp": 48,
+    "stat_attack": 48,
+    "stat_defense": 48,
+    "stat_special-attack": 48,
+    "stat_special-defense": 48,
+    "stat_speed": 48
+  }
+}

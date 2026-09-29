@@ -1,0 +1,73 @@
+
+======================================================================
+  ETAPA 1: FUENTES
+======================================================================
+  JSON (aeropuertos)   -> airports.json
+  CSV  (restaurantes)  -> Zomato_Restaurant_Dataset.csv
+  API  (mascota)       -> https://pokeapi.co/api/v2/pokemon/ditto
+
+======================================================================
+  ETAPA 2: LECTURA (e identificación de estructura)
+======================================================================
+  [JSON] semiestructurado: 'airports' con 30 aeropuertos
+         campos: code, name, city, country, lat, lon
+  [CSV ] estructurado/tabular: 9551 filas x 21 columnas
+         columnas clave: City, Cuisines, Aggregate rating, Votes, Latitude, Longitude
+  [API ] semiestructurado (RESPALDO local (no se pudo consultar la API: HTTPError)): 8 llaves de primer nivel
+
+======================================================================
+  ETAPA 3: TRANSFORMACIÓN (selección, limpieza y normalización)
+======================================================================
+  [JSON] aplanado a tabla: 30 aeropuertos x 6 columnas
+  [CSV ] seleccionadas 9 de 21 columnas; 1864 restaurantes sin calificar excluidos
+  [CSV ] agregado por ciudad candidata: 141 ciudades
+  [API ] ficha de Ditto aplanada a 13 campos
+
+======================================================================
+  ETAPA 4: INTEGRACIÓN (JSON + CSV por cercanía geográfica; API a la ficha)
+======================================================================
+  Ciudades candidatas con terminal internacional a <= 100 km: 7 de 141
+          ciudad iata  km_al_aeropuerto  restaurantes  rating_gastronomico  pct_delivery
+          London  LHR              22.9            20                 4.53           0.0
+           Dubai  DXB              10.9            20                 4.37          30.0
+Vineland Station  YYZ              58.1             1                 4.30           0.0
+        Istanbul  IST              35.1            14                 4.29           0.0
+         Sharjah  DXB               8.7            20                 4.03          55.0
+       Princeton  JFK              80.5             1                 4.00           0.0
+       Singapore  SIN              17.7            20                 3.58           0.0
+
+======================================================================
+  ETAPA 5: RESULTADO (sede ganadora + folleto informativo)
+======================================================================
+
+INFORME CONSOLIDADO — SEDE DE LA CONVENCIÓN INTERNACIONAL
+==========================================================
+Criterios: aeropuerto internacional a <= 100 km + mejor calificación gastronómica.
+
+SEDE GANADORA: London
+  Aeropuerto más cercano : London Heathrow (LHR), a 22.9 km.
+  Calificación gastronómica : 4.53 (sobre 20 restaurantes evaluados).
+  Restaurantes con servicio a domicilio : 0.0%.
+
+Otras ciudades candidatas (cumplen el requisito de accesibilidad aérea):
+  - Dubai (cerca de DXB, 10.9 km) — rating 4.37, 20 restaurantes
+  - Vineland Station (cerca de YYZ, 58.1 km) — rating 4.3, 1 restaurantes
+  - Istanbul (cerca de IST, 35.1 km) — rating 4.29, 14 restaurantes
+  - Sharjah (cerca de DXB, 8.7 km) — rating 4.03, 20 restaurantes
+  - Princeton (cerca de JFK, 80.5 km) — rating 4.0, 1 restaurantes
+  - Singapore (cerca de SIN, 17.7 km) — rating 3.58, 20 restaurantes
+
+PERSONAJE MASCOTA DEL EVENTO (para el folleto informativo)
+----------------------------------------------------------
+  Nombre       : Ditto (Pokédex #132)
+  Tipo         : normal
+  Habilidades  : limber, imposter (oculta)
+  Stats base   : HP 48 · Ataque 48 · Defensa 48 · Velocidad 48
+  Fuente       : RESPALDO local (no se pudo consultar la API: HTTPError)
+
+Nota: la API es de un dominio distinto (Pokémon) y no comparte llave con las
+ciudades o aeropuertos; se integra únicamente a nivel de informe/folleto final.
+
+  Archivos generados en docs/evidencias/: ciudades_candidatas.csv, informe_convencion.json, informe_convencion.txt
+
+  Fuentes -> Lectura -> Transformación -> Integración -> Resultado  [COMPLETADO]

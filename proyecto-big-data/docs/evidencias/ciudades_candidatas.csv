@@ -1,0 +1,8 @@
+﻿ciudad,restaurantes,rating_gastronomico,votos,pct_delivery,lat,lon,iata,aeropuerto,km_al_aeropuerto
+London,20,4.53,8724,0.0,51.512015611,-0.13108822225,LHR,London Heathrow,22.9
+Dubai,20,4.37,18693,30.0,25.1980205835,55.274324102,DXB,Dubai International,10.9
+Vineland Station,1,4.3,204,0.0,43.1868697,-79.3791465,YYZ,Toronto Pearson International,58.1
+Istanbul,14,4.29,12043,0.0,41.029903835000006,29.016331271428573,IST,Istanbul Airport,35.1
+Sharjah,20,4.03,4873,55.0,25.3248995955,55.397934809000006,DXB,Dubai International,8.7
+Princeton,1,4.0,542,0.0,40.352385,-74.651139,JFK,John F. Kennedy International,80.5
+Singapore,20,3.58,638,0.0,1.2939161034,103.84873413999999,SIN,Singapore Changi,17.7
