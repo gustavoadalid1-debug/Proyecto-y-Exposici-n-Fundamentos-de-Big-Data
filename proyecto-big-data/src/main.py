@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Proyecto: Fuentes de datos en Big Data
-Problemática (Opción 2): Organización de una Convención Internacional de
+Problemática: Organización de una Convención Internacional de
 Entretenimiento (Comic-Con / Expo Pop)
 
 Un comité organizador debe elegir la ciudad sede de la próxima Convención
@@ -66,13 +66,13 @@ def haversine(lat1, lon1, lat2, lon2):
     return 2 * r * math.asin(math.sqrt(a))
 
 
-# --------------------------------------------------------------------------- 1. FUENTES
+#1.- FUENTES
 etapa(1, "FUENTES")
 print(f"  JSON (aeropuertos)   -> {JSON_PATH.name}")
 print(f"  CSV  (restaurantes)  -> {CSV_PATH.name}")
 print(f"  API  (mascota)       -> {API_URL}")
 
-# --------------------------------------------------------------------------- 2. LECTURA
+#2.- LECTURA
 etapa(2, "LECTURA (e identificación de estructura)")
 
 with open(JSON_PATH, encoding="utf-8") as f:
@@ -94,7 +94,7 @@ except Exception as e:  # sin internet, timeout, etc.
     origen_api = f"RESPALDO local (no se pudo consultar la API: {type(e).__name__})"
 print(f"  [API ] semiestructurado ({origen_api}): {len(raw_api)} llaves de primer nivel")
 
-# --------------------------------------------------------------------------- 3. TRANSFORMACIÓN
+#3.- TRANSFORMACIÓN
 etapa(3, "TRANSFORMACIÓN (selección, limpieza y normalización)")
 
 # JSON -> tabla de aeropuertos candidatos.
@@ -138,7 +138,7 @@ ficha_ditto = {
 }
 print(f"  [API ] ficha de {ficha_ditto['nombre']} aplanada a {len(ficha_ditto)} campos")
 
-# --------------------------------------------------------------------------- 4. INTEGRACIÓN
+#4.- INTEGRACIÓN
 etapa(4, "INTEGRACIÓN (JSON + CSV por cercanía geográfica; API a la ficha)")
 
 
@@ -156,7 +156,7 @@ print(f"  Ciudades candidatas con terminal internacional a <= {MAX_KM} km: {len(
 print(candidatas[["ciudad", "iata", "km_al_aeropuerto", "restaurantes", "rating_gastronomico", "pct_delivery"]]
       .to_string(index=False))
 
-# --------------------------------------------------------------------------- 5. RESULTADO
+#5.- RESULTADO
 etapa(5, "RESULTADO (sede ganadora + folleto informativo)")
 ganadora = candidatas.iloc[0]
 
